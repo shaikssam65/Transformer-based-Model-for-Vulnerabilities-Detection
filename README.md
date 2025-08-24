@@ -45,4 +45,52 @@ pip install transformers>=4.41.0 \
 
 ```
 
+### Prepare Data
+
+## H1 (Per-category balance)
+```bash
+python scripts/prepare_data.py \
+  --input data/raw/merged_allkind.csv \
+  --strategy h1 \
+  --outdir data/prepared/h1
+```
+
+## H2 (Uniform low-resource balance)
+```bash
+python scripts/prepare_data.py \
+  --input data/raw/merged_allkind.csv \
+  --strategy h2 \
+  --outdir data/prepared/h2
+```
+
+### 🚀 Training
+```bash
+Optional GPU Selection
+
+Linux/macOS:
+
+export CUDA_VISIBLE_DEVICES=0
+
+
+Windows (PowerShell):
+
+$env:CUDA_VISIBLE_DEVICES="0"
+
+```
+
+
+
+### Train all 3 models on H1
+```bash
+python scripts/train.py \
+  --dataset_dir data/prepared/h1 \
+  --models microsoft/codebert-base,distilbert-base-uncased,google/gemma-2-2b \
+  --epochs 5 --batch_size 16 --max_len 128
+
+Train all 3 models on H2
+python scripts/train.py \
+  --dataset_dir data/prepared/h2 \
+  --models microsoft/codebert-base,distilbert-base-uncased,google/gemma-2-2b \
+  --epochs 5 --batch_size 16 --max_len 128
+```
 
