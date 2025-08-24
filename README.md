@@ -20,11 +20,13 @@ Place your raw CSV at `data/raw/merged_allkind.csv` with (default) columns:
 > You can override column names via CLI flags in `scripts/prepare_data.py`.
 
 ## (Optional) Fetch SySeVR repo
-
+```bash
 git clone --depth 1 --filter=blob:none --sparse https://github.com/SySeVR/SySeVR.git
 cd SySeVR && git sparse-checkout set --no-cone .
 cd ..
----
+
+
+```bash
 
 ## ⚙️ Requirements
 
@@ -44,7 +46,7 @@ tqdm>=4.66.0
 ```text
 pip install -r requirements.txt
 
-
+```bash
 # Transformer-based Model for Vulnerabilities Detection
 
 ## 🧪 Reproducible Splits
@@ -59,7 +61,7 @@ cd SySeVR
 git sparse-checkout set Data
 
 
-
+```bash
 ## H1 (per-category balance)
 python scripts/prepare_data.py \
   --input data/raw/merged_allkind.csv \
@@ -75,6 +77,7 @@ python scripts/prepare_data.py \
 
 
 🚀 Training
+```bash
 Optional GPU selection
 
 Linux/macOS:
