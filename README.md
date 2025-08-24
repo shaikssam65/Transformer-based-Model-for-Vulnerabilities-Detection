@@ -8,7 +8,7 @@ This repository evaluates three Transformer models—**DistilBERT**, **CodeBERT*
 ---
 
 
-### 📂 Download SySeVR Data (one step)
+## 📂 Download SySeVR Data (one step)
 
 ```bash
 git clone --depth 1 --filter=blob:none --sparse https://github.com/SySeVR/SySeVR.git
@@ -53,4 +53,20 @@ python scripts/train.py \
 python scripts/train.py \
   --dataset_dir data/prepared/h2 \
   --models microsoft/codebert-base,distilbert-base-uncased,google/gemma-2-2b \
-  --epochs 5 --batch_size 16 --max_len 128 
+  --epochs 5 --batch_size 16 --max_len 128
+
+
+
+## Requirements
+
+```text
+transformers>=4.41.0
+datasets>=2.20.0
+accelerate>=0.30.0
+scikit-learn>=1.3.0
+torch>=2.2.0
+pandas>=2.0.0
+numpy>=1.24.0
+psutil>=5.9.0
+tqdm>=4.66.0
+
