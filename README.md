@@ -86,8 +86,10 @@ python scripts/train.py \
   --dataset_dir data/prepared/h1 \
   --models microsoft/codebert-base,distilbert-base-uncased,google/gemma-2-2b \
   --epochs 5 --batch_size 16 --max_len 128
+```
 
 Train all 3 models on H2
+```bash
 python scripts/train.py \
   --dataset_dir data/prepared/h2 \
   --models microsoft/codebert-base,distilbert-base-uncased,google/gemma-2-2b \
