@@ -31,15 +31,14 @@ cd SySeVR && git sparse-checkout set --no-cone .
 cd ..
 
 
-### ⚙️ Requirements
-```bash
-transformers>=4.41.0
-datasets>=2.20.0
-accelerate>=0.30.0
-scikit-learn>=1.3.0
-torch>=2.2.0
-pandas>=2.0.0
-numpy>=1.24.0
-psutil>=5.9.0
-tqdm>=4.66.0
+# Install all required Python packages
+pip install transformers>=4.41.0 \
+             datasets>=2.20.0 \
+             accelerate>=0.30.0 \
+             scikit-learn>=1.3.0 \
+             torch>=2.2.0 \
+             pandas>=2.0.0 \
+             numpy>=1.24.0 \
+             psutil>=5.9.0 \
+             tqdm>=4.66.0
 
