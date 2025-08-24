@@ -8,7 +8,7 @@ This repository evaluates three Transformer models—**DistilBERT**, **CodeBERT*
 ---
 
 
-## 📂 Download SySeVR Data (one step)
+# 📂 Download SySeVR Data (one step)
 
 ```bash
 git clone --depth 1 --filter=blob:none --sparse https://github.com/SySeVR/SySeVR.git
@@ -57,7 +57,7 @@ python scripts/train.py \
 
 
 
-## Requirements
+# Requirements
 
 ```text
 transformers>=4.41.0
