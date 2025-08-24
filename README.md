@@ -19,12 +19,12 @@ Place your raw CSV at `data/raw/merged_allkind.csv` with (default) columns:
 
 > You can override column names via CLI flags in `scripts/prepare_data.py`.
 
-### (Optional) Fetch SySeVR repo
+# (Optional) Fetch SySeVR repo
 ```bash
 git clone --depth 1 --filter=blob:none --sparse https://github.com/SySeVR/SySeVR.git
 cd SySeVR && git sparse-checkout set --no-cone .
 cd ..
-
+---
 
 ## ⚙️ Requirements
 
