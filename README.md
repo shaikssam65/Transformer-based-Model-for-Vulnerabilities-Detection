@@ -5,8 +5,6 @@ This repository evaluates three Transformer models—**DistilBERT**, **CodeBERT*
 - **H1 — Equal Distribution by Subclass:** each category (API, AU, PU, AE) is internally balanced (all vulnerable + equal # of non-vulnerable).
 - **H2 — Balance by Smallest Subclass:** every category is downsampled to the smallest vulnerable subclass size; perfectly balanced and uniform.
 
----
-
 
 # 📂 Download SySeVR Data (one step)
 
